@@ -78,12 +78,12 @@ const Header = () => {
             className="flex-shrink-0 flex items-center cursor-pointer group" 
             onClick={() => navigate('/')}
           >
-            <div className="bg-gradient-to-tr from-indigo-600 to-purple-600 p-2 rounded-lg mr-2 transform transition-transform group-hover:rotate-12 duration-300 shadow-lg shadow-indigo-500/20">
-              <Briefcase className="h-6 w-6 text-white" />
-            </div>
-            <span className="font-bold text-xl md:text-2xl tracking-tight text-slate-900 dark:text-white">
-              Referrix
-            </span>
+            <img 
+              src="/logo.png" 
+              alt="Referrix Logo" 
+              className="w-10 h-10 object-contain"
+            />
+            <span className="text-xl font-bold">Referrix</span>
           </div>
 
           {/* Desktop Nav */}

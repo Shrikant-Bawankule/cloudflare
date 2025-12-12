@@ -11,10 +11,12 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="bg-gradient-to-tr from-indigo-600 to-purple-600 p-1.5 rounded-lg">
-                <Briefcase className="h-5 w-5 text-white" />
-              </div>
-              <span className="text-xl font-bold text-white">Referrix</span>
+              <img 
+                src="/logo.png" 
+                alt="Referrix Logo" 
+                className="w-10 h-10 object-contain"
+              />
+              <span className="text-xl font-bold">Referrix</span>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed">
               Empowering career growth through the power of community and verified referrals.
@@ -76,7 +78,7 @@ const Footer = () => {
 
         <div className="border-t border-slate-800 pt-8 flex justify-center items-center">
           <p className="text-slate-500 text-sm">
-            © {new Date().getFullYear()} Referrix. Made with ❤️ for job seekers.
+            © {new Date().getFullYear()} Referrix. Made with ❤️ & 🍵 for job seekers.
           </p>
         </div>
       </div>
