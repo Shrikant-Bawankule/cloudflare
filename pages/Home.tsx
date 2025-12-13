@@ -157,7 +157,7 @@ const Home = () => {
                                 <span className="text-2xl text-slate-500 line-through font-medium">₹250</span>
                             </div>
                             <ul className="text-left space-y-4 text-slate-300 mb-8">
-                                <li className="flex items-center"><ArrowRight className="h-5 w-5 mr-3 text-amber-500" /> 250+ HR Contacts</li>
+                                <li className="flex items-center"><ArrowRight className="h-5 w-5 mr-3 text-amber-500" /> 1800+ HR Contacts</li>
                                 <li className="flex items-center"><ArrowRight className="h-5 w-5 mr-3 text-amber-500" /> Cold Email Templates</li>
                                 <li className="flex items-center"><ArrowRight className="h-5 w-5 mr-3 text-amber-500" /> Mass Hiring List</li>
                                 <li className="flex items-center"><ArrowRight className="h-5 w-5 mr-3 text-amber-500" /> Cover Letter</li>
