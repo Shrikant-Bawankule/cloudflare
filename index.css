@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Ensure default cursor is always visible */
+body, html, * {
+  cursor: auto;
+}
+
+/* Custom cursor elements will override this */
+.custom-cursor-dot,
+.custom-cursor-outline {
+  cursor: none;
+}
+
+/* Hide custom cursor on touch devices */
+@media (pointer: coarse) {
+  .custom-cursor-dot,
+  .custom-cursor-outline {
+    display: none !important;
+  }
+}

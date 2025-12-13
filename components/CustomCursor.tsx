@@ -13,12 +13,12 @@ const CustomCursor = () => {
       if (dotRef.current && outlineRef.current) {
         // Direct transform for dot (instant)
         dotRef.current.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0) translate(-50%, -50%)`;
-        
+
         // Fast animation for outline to reduce lag
         outlineRef.current.animate({
           transform: `translate3d(${e.clientX}px, ${e.clientY}px, 0) translate(-50%, -50%)`
         }, {
-          duration: 50, // Reduced from 500ms to 50ms for snappier feel
+          duration: 50,
           fill: "forwards",
           easing: "ease-out"
         });
@@ -28,9 +28,9 @@ const CustomCursor = () => {
     const handleMouseOver = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       if (
-        target.tagName === 'A' || 
-        target.tagName === 'BUTTON' || 
-        target.closest('a') || 
+        target.tagName === 'A' ||
+        target.tagName === 'BUTTON' ||
+        target.closest('a') ||
         target.closest('button') ||
         target.classList.contains('cursor-pointer')
       ) {
@@ -51,17 +51,17 @@ const CustomCursor = () => {
 
   return (
     <>
-      <div 
-        ref={dotRef} 
-        className={`hidden md:block cursor-dot ${isHovering ? 'opacity-0' : 'opacity-100'}`} 
+      <div
+        ref={dotRef}
+        className="custom-cursor-dot pointer-events-none fixed top-0 left-0 w-2 h-2 bg-indigo-500 rounded-full z-[9999] mix-blend-screen"
+        style={{ willChange: 'transform' }}
       />
-      <div 
-        ref={outlineRef} 
-        className={`hidden md:block cursor-outline transition-all duration-75 ease-out ${
-          isHovering 
-            ? 'w-16 h-16 bg-indigo-500/10 border-transparent' 
-            : 'w-8 h-8'
-        }`} 
+      <div
+        ref={outlineRef}
+        className={`custom-cursor-outline pointer-events-none fixed top-0 left-0 w-8 h-8 border-2 ${
+          isHovering ? 'border-indigo-400 scale-150' : 'border-indigo-500/50'
+        } rounded-full z-[9998] transition-all duration-200`}
+        style={{ willChange: 'transform' }}
       />
     </>
   );

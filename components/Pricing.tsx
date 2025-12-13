@@ -61,7 +61,7 @@ const Pricing = () => {
                   ${plan.isPopular 
                     ? 'glass-premium border-indigo-500/30 shadow-indigo-500/20 z-10 scale-105' 
                     : plan.id === 'early' 
-                        ? 'bg-gradient-to-br from-indigo-900 to-purple-900 text-white shadow-xl border border-white/10'
+                        ? 'bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-900 dark:to-purple-900 shadow-xl border border-indigo-200 dark:border-white/10'
                         : 'glass-card border border-slate-200 dark:border-slate-700/50'
                   }
                 `}
@@ -97,15 +97,15 @@ const Pricing = () => {
                       </div>
                   )}
 
-                  <h3 className={`text-xl font-bold mb-2 ${plan.id === 'early' ? 'text-white' : 'text-slate-900 dark:text-white'}`}>
+                  <h3 className={`text-xl font-bold mb-2 text-slate-900 dark:text-white`}>
                     {plan.name}
                   </h3>
                   <div className="flex items-baseline justify-center mt-6">
-                    <span className={`text-5xl font-black tracking-tight ${plan.id === 'early' ? 'text-white' : 'text-slate-900 dark:text-white'}`}>
+                    <span className={`text-5xl font-black tracking-tight text-slate-900 dark:text-white`}>
                       ₹{plan.price[billingCycle]}
                     </span>
                     {plan.price[billingCycle] > 0 && (
-                        <span className={`ml-1 text-lg font-medium ${plan.id === 'early' ? 'text-indigo-200' : 'text-slate-500'}`}>
+                        <span className={`ml-1 text-lg font-medium ${plan.id === 'early' ? 'text-indigo-600 dark:text-indigo-200' : 'text-slate-500'}`}>
                         /{billingCycle === 'bimonthly' ? '2mo' : 'qtr'}
                         </span>
                     )}
@@ -115,10 +115,10 @@ const Pricing = () => {
                 <ul className="mb-8 space-y-3">
                   {plan.features.map((feature, i) => (
                     <li key={i} className="flex items-start">
-                      <div className={`p-0.5 rounded-full mr-3 mt-0.5 flex-shrink-0 ${plan.id === 'early' ? 'bg-green-400/20' : 'bg-green-500/10'}`}>
-                        <Check className={`h-4 w-4 ${plan.id === 'early' ? 'text-green-400' : 'text-green-600 dark:text-green-500'}`} />
+                      <div className={`p-0.5 rounded-full mr-3 mt-0.5 flex-shrink-0 ${plan.id === 'early' ? 'bg-indigo-100 dark:bg-green-400/20' : 'bg-green-500/10'}`}>
+                        <Check className={`h-4 w-4 ${plan.id === 'early' ? 'text-indigo-600 dark:text-green-400' : 'text-green-600 dark:text-green-500'}`} />
                       </div>
-                      <span className={`text-[15px] font-bold leading-snug ${plan.id === 'early' ? 'text-slate-100' : 'text-slate-900 dark:text-white'}`}>
+                      <span className={`text-[15px] font-bold leading-snug ${plan.id === 'early' ? 'text-slate-700 dark:text-slate-100' : 'text-slate-900 dark:text-white'}`}>
                         {feature}
                       </span>
                     </li>
@@ -126,9 +126,9 @@ const Pricing = () => {
                   {plan.unavailableFeatures?.map((feature) => (
                     <li key={feature} className="flex items-start opacity-50">
                         <div className="p-0.5 rounded-full mr-3 bg-slate-500/10 flex-shrink-0">
-                            <X className={`h-4 w-4 ${plan.id === 'early' ? 'text-slate-400' : 'text-slate-400'}`} />
+                            <X className={`h-4 w-4 text-slate-400`} />
                         </div>
-                        <span className={`text-[15px] font-medium ${plan.id === 'early' ? 'text-slate-400' : 'text-slate-500'}`}>
+                        <span className={`text-[15px] font-medium text-slate-500`}>
                             {feature}
                         </span>
                     </li>
