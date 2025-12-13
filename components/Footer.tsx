@@ -5,25 +5,24 @@ import { NAV_ITEMS } from '../constants';
 
 const Footer = () => {
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    // Only handle smooth scroll for anchor links (starting with #)
     if (href.startsWith('#')) {
       e.preventDefault();
-      const element = document.querySelector(href);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+      const el = document.querySelector(href);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
 
   return (
-    <footer className="bg-slate-900 dark:bg-black text-slate-300 py-12 px-6">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-        {/* Brand Section */}
-        <div className="col-span-1">
+    <footer className="bg-slate-900 dark:bg-black text-slate-300 pt-12 px-6">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 pb-10">
+        {/* Brand + CTA */}
+        <div>
           <div className="flex items-center gap-2 mb-4">
-            <div className="bg-gradient-to-br from-indigo-500 to-purple-600 p-2 rounded-lg">
-              <Briefcase className="w-6 h-6 text-white" />
-            </div>
+            <img
+              src="/logo.png"
+              alt="Referrix logo"
+              className="h-8 w-auto"
+            />
             <span className="text-xl font-bold text-white">Referrix</span>
           </div>
           <p className="text-sm text-slate-400 mb-4">
@@ -63,17 +62,26 @@ const Footer = () => {
           <h3 className="text-white font-semibold mb-4">Legal</h3>
           <ul className="space-y-2">
             <li>
-              <Link to="/privacy" className="text-slate-400 hover:text-white transition-colors text-sm">
+              <Link
+                to="/privacy"
+                className="text-slate-400 hover:text-white transition-colors text-sm"
+              >
                 Privacy Policy
               </Link>
             </li>
             <li>
-              <Link to="/terms" className="text-slate-400 hover:text-white transition-colors text-sm">
-                Terms & Conditions
+              <Link
+                to="/terms"
+                className="text-slate-400 hover:text-white transition-colors text-sm"
+              >
+                Terms &amp; Conditions
               </Link>
             </li>
             <li>
-              <Link to="/refund" className="text-slate-400 hover:text-white transition-colors text-sm">
+              <Link
+                to="/refund"
+                className="text-slate-400 hover:text-white transition-colors text-sm"
+              >
                 Refund Policy
               </Link>
             </li>
@@ -86,7 +94,10 @@ const Footer = () => {
           <ul className="space-y-2">
             <li className="flex items-center gap-2 text-sm">
               <Mail className="w-4 h-4 text-indigo-400" />
-              <a href="mailto:referrix.team@gmail.com" className="text-slate-400 hover:text-white transition-colors">
+              <a
+                href="mailto:referrix.team@gmail.com"
+                className="text-slate-400 hover:text-white transition-colors"
+              >
                 referrix.team@gmail.com
               </a>
             </li>
@@ -94,9 +105,13 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Bar */}
-      <div className="max-w-7xl mx-auto mt-8 pt-8 border-t border-slate-800 text-center text-sm text-slate-500">
-        <p>&copy; {new Date().getFullYear()} Referrix. All rights reserved.</p>
+      {/* Bottom bar with border, logo + text */}
+      <div className="border-t border-slate-800">
+        <div className="max-w-7xl mx-auto py-4 flex items-center justify-center">
+          <p className="text-slate-500 text-sm text-center">
+             © {new Date().getFullYear()} Referrix. Made with ❤️ for job seekers.
+           </p>
+        </div>
       </div>
     </footer>
   );
