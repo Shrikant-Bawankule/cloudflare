@@ -133,7 +133,7 @@ const Home = () => {
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-500">Seekers Toolkit</span>
                         </h2>
                         <p className="text-slate-300 text-lg mb-10 leading-relaxed max-w-lg">
-                            Get instant access to 1800+ HR emails, mass hiring company lists, and proven cold email templates. 
+                            Get instant access to 1800+ HR emails, mass hiring company lists, Cover Letter and proven cold email templates. 
                             Stop searching, start connecting.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center gap-6">
@@ -160,6 +160,7 @@ const Home = () => {
                                 <li className="flex items-center"><ArrowRight className="h-5 w-5 mr-3 text-amber-500" /> 250+ HR Contacts</li>
                                 <li className="flex items-center"><ArrowRight className="h-5 w-5 mr-3 text-amber-500" /> Cold Email Templates</li>
                                 <li className="flex items-center"><ArrowRight className="h-5 w-5 mr-3 text-amber-500" /> Mass Hiring List</li>
+                                <li className="flex items-center"><ArrowRight className="h-5 w-5 mr-3 text-amber-500" /> Cover Letter</li>
                             </ul>
                         </div>
                     </div>
