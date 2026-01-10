@@ -108,14 +108,14 @@ const Home = () => {
 
       <div className="gradient-line"></div>
 
-      {/* Resources Section - White to Slate Gradient */}
-      <section id="resources" className="py-32 bg-gradient-to-b from-white to-slate-50 dark:from-slate-800 dark:to-slate-800 relative overflow-hidden">
+      {/* Resources Section - Soft Aesthetic Lavender to Sky mesh */}
+      <section id="resources" className="py-32 bg-gradient-to-br from-[#f8fafc] via-[#fdf2f8]/40 to-[#eff6ff]/40 dark:from-slate-800 dark:to-slate-800 relative overflow-hidden transition-colors">
          {/* Aesthetic Elements */}
          <div className="aesthetic-blob blob-1" style={{ top: '50%', right: '5%', opacity: 0.1 }}></div>
-
+         <div className="aesthetic-blob blob-2" style={{ top: '10%', left: '10%', opacity: 0.05 }}></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <Reveal width="100%">
-            <div className="relative rounded-[2.5rem] bg-slate-900 overflow-hidden p-8 md:p-20 text-center lg:text-left group">
+            <div className="relative rounded-[2.5rem] bg-slate-900 overflow-hidden p-8 md:p-20 text-center lg:text-left group shadow-2xl shadow-indigo-500/10">
                 {/* Decorative gradients */}
                 <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-amber-500/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-amber-500/30 transition-colors duration-700"></div>
                 <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-indigo-500/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 group-hover:bg-indigo-500/30 transition-colors duration-700"></div>
@@ -172,11 +172,12 @@ const Home = () => {
 
       <div className="gradient-line"></div>
 
-      {/* Stories - Warm Off-White Gradient */}
-      <section id="stories" className="py-32 bg-gradient-to-b from-[#fdfcfb] to-[#f8f9fa] dark:from-slate-900 dark:to-slate-900 transition-colors relative overflow-hidden">
+      {/* Stories - Soft Mint to Indigo Aesthetic Gradient */}
+      <section id="stories" className="py-32 bg-gradient-to-b from-[#f8fafc] via-[#ecfdf5]/30 to-[#f5f3ff]/30 dark:from-slate-900 dark:to-slate-900 transition-colors relative overflow-hidden">
         {/* Aesthetic Elements */}
-        <div className="aesthetic-blob blob-3" style={{ bottom: '10%', right: '50%' }}></div>
-
+        <div className="aesthetic-blob blob-3" style={{ bottom: '10%', right: '50%', opacity: 0.08 }}></div>
+        <div className="decorative-circle circle-2" style={{ top: '20%', right: '10%', opacity: 0.5 }}></div>
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-20">
                 <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-6">Success Stories</h2>
@@ -189,7 +190,7 @@ const Home = () => {
                         key={story.id} 
                         delay={i * 150}
                         span={1} 
-                        className="p-8 flex flex-col h-full glass-section-bg"
+                        className="p-8 flex flex-col h-full glass-section-bg border-indigo-100/50 dark:border-slate-700/50"
                     >
                         <div className="flex text-amber-400 mb-6">
                             {[...Array(story.rating)].map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}
@@ -197,7 +198,7 @@ const Home = () => {
                         </div>
                         <div className="relative mb-8 flex-grow">
                              <Quote className="absolute -top-2 -left-2 h-8 w-8 text-indigo-500/10 dark:text-indigo-400/10 transform -scale-x-100" />
-                             <p className="text-slate-600 dark:text-slate-300 text-lg leading-relaxed relative z-10 italic">"{story.text}"</p>
+                             <p className="text-slate-600 dark:text-slate-300 text-lg leading-relaxed relative z-10 italic font-medium">"{story.text}"</p>
                         </div>
                         
                         <div className="flex items-center mt-auto border-t border-slate-100 dark:border-slate-700 pt-6">
@@ -206,7 +207,7 @@ const Home = () => {
                             </div>
                             <div>
                                 <div className="font-bold text-slate-900 dark:text-white text-lg">{story.name}</div>
-                                <div className="text-sm text-indigo-600 dark:text-indigo-400 font-medium">{story.company}</div>
+                                <div className="text-sm text-indigo-600 dark:text-indigo-400 font-bold uppercase tracking-wider text-[10px] md:text-xs">{story.company}</div>
                             </div>
                         </div>
                     </BentoItem>
