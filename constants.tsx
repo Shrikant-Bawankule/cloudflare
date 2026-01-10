@@ -71,10 +71,10 @@ export const PRICING_PLANS: Plan[] = [
     price: { bimonthly: 199, quarterly: 269 },
     buttonText: 'Get Started',
     features: [
-      'Daily Curated Referrals (25-30 opportunities)',
+      'Daily Curated Referrals (20-30 opportunities)',
       'Verified Opportunity Access',
       '48-Hour Referral Processing',
-      'Advanced LinkedIn Profile Boost',
+      'LinkedIn Profile Boost',
       'Career Growth Insights',
       'Enhanced Job Visibility'
     ],
@@ -94,13 +94,14 @@ export const PRICING_PLANS: Plan[] = [
     name: 'Early Access',
     badge: 'Best Value',
     timingBadge: '24-Hour Exclusive First Access',
-    price: { bimonthly: 299, quarterly: 382 },
+    price: { bimonthly: 269, quarterly: 343 },
     buttonText: 'Go Premium',
     features: [
       'Everything in Premium Plan',
       'Max Referral Volume (35-40 daily)',
       'Professional Resume Audit',
       'Priority Member Support',
+      'Advance LinkedIn Profile Boost',
       'Deep ATS Score Analysis',
       'ATS-Optimized Resume Templates',
       '24-Hour First Access Advantage',
