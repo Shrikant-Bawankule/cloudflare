@@ -59,9 +59,9 @@ const Pricing = () => {
                   relative h-full flex flex-col rounded-3xl p-8 transition-all duration-500 group preserve-3d
                   hover:-translate-y-4 hover:shadow-2xl
                   ${plan.isPopular 
-                    ? 'bg-white dark:bg-indigo-500/10 border-2 border-indigo-500 shadow-xl shadow-indigo-500/20 z-10 scale-105 backdrop-blur-xl' 
+                    ? 'bg-indigo-50/60 dark:bg-indigo-500/10 border-2 border-indigo-500 shadow-xl shadow-indigo-500/20 z-10 scale-105 backdrop-blur-xl' 
                     : plan.id === 'early' 
-                        ? 'bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-900/40 dark:to-purple-900/40 shadow-xl border border-indigo-200 dark:border-white/10 backdrop-blur-md'
+                        ? 'bg-gradient-to-br from-indigo-50/50 to-purple-50/50 dark:from-indigo-900/40 dark:to-purple-900/40 shadow-xl border border-indigo-200/50 dark:border-white/10 backdrop-blur-md'
                         : 'glass-card border border-slate-200 dark:border-slate-700/50'
                   }
                 `}
