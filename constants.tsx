@@ -60,7 +60,7 @@ export const PRICING_PLANS: Plan[] = [
       'Resume Review',
       'Priority Support'
     ],
-    link: 'https://t.me/+lLd2h5Iae204Nzk1'
+    link: 'https://t.me/+oVo0-5xphvJlMjg1'
   },
   {
     id: 'premium',
